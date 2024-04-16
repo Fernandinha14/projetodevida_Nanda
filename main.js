@@ -1,16 +1,16 @@
-const botoes= document.queryselectorAll (".botao");
-const botoes= document.queryselectorAll (".aba-conteudo");
+const botoes = document.querySelectorAll(".botao");
+const textos = document.querySelectorAll(".aba-conteudo");
 
-for (let i=0; i <botoes.length; i++) {
+for (let i = 0; i < botoes.length; i++) {
+    botoes[i].onclick = function () {
 
-    botoes [i]. onclik=function ()  {
+        for (let j = 0; j < botoes.length; j++) {
+            botoes[j].classList.remove("ativo");
+            textos[j].classList.remove("ativo");
+        }
 
-        for (let j=0; j <botoes.length; j++) {
-            botoes[j] .classlist.remove("ativo");
-            textos[j] .classlist.remove("ativo");
-    }
-    botoes[i] .classlist.add("ativo");
-    textos[i] .classlist.add("ativo");
+        botoes[i].classList.add("ativo");
+        textos[i].classList.add("ativo");
     }
 }
 
